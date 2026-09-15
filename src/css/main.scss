@@ -1,9 +1,28 @@
 /* Your SCSS here. */
-nav {
+
+$primary-color: #8DB600;
+$light-background-color: #DCEDC8;
+$dark-secondary-color: #6B8E23;
+
+/*
+Citation for sticky nav bar: 
+https://claude.ai/share/3d3585f6-66c1-44cf-916c-2c5f82ea6992
+*/
+header {
     position: sticky;
-    background-color: yellow;
-    height: 50px;
+    z-index: 9999;
     top: 0;
+}
+
+nav {
+    background-color: $primary-color;
+    height: 50px;
+    color: white;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
 }
 
 *{
@@ -16,14 +35,25 @@ nav li {
     display: block;
     padding: 15px 20px;
     text-align: center;
-    float: right;
+    background-color: $primary-color;
+    margin: 0;
+}
+
+nav li:hover {
+    background-color: $dark-secondary-color;
+    transition: 1s;
 }
 
 section{
     height: 100%;
-    padding: 80px 20px;
     text-align: center;
     align-items: center;
+    min-height: 100vh;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 #experience > h2 {
@@ -38,11 +68,17 @@ section{
 
 .multi-column-box {
     padding: 10px 20px;
-    border: 5px solid red;
 }
 
+/*
+Citation for stuck background image
+https://stackoverflow.com/questions/23570727/how-to-keep-background-in-fixed-place-while-scrolling
+*/
 #title{
     background-image: url('https://images.unsplash.com/photo-1661892568845-2cfee9166844?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 #video > video {
@@ -53,14 +89,19 @@ section{
 https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Overflow/Carousels
 */
 
+#projects, #video {
+    background-color: $light-background-color;
+}
+
 #projects > ul {
     display: flex;
     overflow-x: hidden;
     scroll-snap-type: x mandatory;
     width: 40%;
-    height: 500px;
-    border: 5px solid blue;
+    height: 300px;
+    border: 5px solid $primary-color;
     margin: 0 auto;
+    margin-top: 20px;
 }
 
 #projects > ul > li {
@@ -68,6 +109,10 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Overflow/Carousels
     padding: 10px;
     scroll-snap-align: center;
     flex: 0 0 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 20px;
 }
 
 video {
@@ -89,7 +134,7 @@ video {
 
 footer{
     padding: 20px;
-    background-color: grey;
+    background-color: $primary-color;
     color: white;
 }
 
@@ -97,4 +142,30 @@ footer{
     padding-top: 20px;
     width: 60%;
     margin: 0 auto;
+}
+
+button {
+    padding: 10px 12px;
+    background-color: #8DB600;
+    color: white;
+    border: none;
+}
+
+button:hover {
+    background-color: #6B8E23;
+    transition: 1s;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+.multi-column-box {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.multi-column-box:first-of-type, .multi-column-box:last-of-type {
+    background-color: #DCEDC8;
 }

@@ -27,3 +27,21 @@ next_button.addEventListener('click', () => {
     // used claude to help me scroll smoothly
     carousel.scrollBy({ left: carousel_body.offsetWidth, behavior: 'smooth' });
 });
+
+// smooth scrolling for nav bar items
+// citation: https://medium.com/@glynlewington/navbar-w-smooth-scrolling-same-page-links-accessibility-cf163b5427e4
+const nav_projects = document.getElementById('nav-projects');
+const nav_experience = document.getElementById('nav-experience');
+const nav_video = document.getElementById('nav-video');
+
+nav_projects.addEventListener('click', () => {
+    document.getElementById('projects').scrollIntoView({ behavior: 'smooth', block: 'start' });
+});
+
+nav_experience.addEventListener('click', () => {
+    document.getElementById('experience').scrollIntoView({ behavior: 'smooth', block: 'start' });
+});
+
+nav_video.addEventListener('click', () => {
+    document.getElementById('video').scrollIntoView({ behavior: 'smooth', block: 'start' });
+});
