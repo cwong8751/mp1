@@ -5,13 +5,14 @@
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/25beb79017.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/main.scss" />
     <title>MP1</title>
 </head>
 
 <body>
     <header>
-        <nav>
+        <nav id="nav-bar">
             <li id="nav-projects">Projects</li>
             <li id="nav-experience">Experience</li>
             <li id="nav-video">Video</li>
@@ -19,11 +20,15 @@
     </header>
     <section id="title">
         <h1>Carl Wang</h1>
-        <p>My name is Carl Wang, I am a master's student in Computer Science at UIUC. I attended Washington University in St. Louis and graduated with a Bachelor's degree majoring in Computer Science.
+        <p>My name is Carl Wang, I am a master's student in Computer Science at UIUC. I attended Washington University
+            in St. Louis and graduated with a Bachelor's degree majoring in Computer Science.
         </p>
         <p>
-            I have experience in building products for real users across disciplines, including automotive, healthcare and edtech. In my previous roles I have built patient facing medical applications used by the Taylor Family Department of Neurosurgery at WashU, 
-            and a user generated content pipeline for an edtech platform focusing on STEM education for deaf or hard of hearing kids.
+            I have experience in building products for real users across disciplines, including automotive, healthcare
+            and edtech. In my previous roles I have built patient facing medical applications used by the Taylor Family
+            Department of Neurosurgery at WashU,
+            and a user generated content pipeline for an edtech platform focusing on STEM education for deaf or hard of
+            hearing kids.
         </p>
     </section>
     <section id="projects">
@@ -43,10 +48,10 @@
             </li>
         </ul>
         <div class="carousel-controls">
-            <button id="prev-slide">Previous Slide</button>
+            <button id="prev-slide"><i class="fa-solid fa-backward"></i></button>
             <!-- the slide counter -->
             <div id="slide-counter">Slide 1 of 3</div>
-            <button id="next-slide">Next Slide</button>
+            <button id="next-slide"><i class="fa-solid fa-forward"></i></button>
         </div>
     </section>
     <section id="experience">
@@ -70,12 +75,18 @@
     <section id="video">
         <h2>Video</h2>
         <video controls>
-            <source src="https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/720/Big_Buck_Bunny_720_10s_2MB.mp4"
+            <source src="./assets/big_bucks_bunny_video.mp4"
                 type="video/mp4">
         </video>
     </section>
     <footer>
         <p>&copy; 2026 made by Carl Wang. All rights reserved.</p>
+        <div class="social-media-icons">
+            <span class="social-media-icons-style">
+                <a href="https://www.github.com/cwong8751"><i class="fa-brands fa-square-github"></i></a>
+                <a href="mailto:carlw3@illinois.edu"><i class="fa-solid fa-square-envelope"></i></a>
+            </span>
+        </div>
     </footer>
 </body>
 
