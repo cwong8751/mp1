@@ -59,19 +59,37 @@
         <p>I have experience in web development, particularly with HTML, CSS, and JavaScript.</p>
         <div class="multi-column-container">
             <div class="multi-column-box">
-                <h3>Full Stack Engineer</h3>
-                <p>Built a user generated content pipeline using Python and Amazon for a edtech startup.</p>
+                <h3>Full Stack Engineer @ ASL Aspire Inc.</h3>
+                <button command="show-modal" commandfor="full-stack-exp-dialog">See More</button>
             </div>
             <div class="multi-column-box">
-                <h3>Software Engineer</h3>
-                <p>Developed a patient facing medical app to measure motor skill abilities using Android.</p>
+                <h3>Software Engineer @ WUSTL School of Medicine</h3>
+                <button command="show-modal" commandfor="swe-exp-dialog">See More</button>
             </div>
             <div class="multi-column-box">
-                <h3>Software Engineering Intern</h3>
-                <p>Built a push notification system with AWS Lambda and Javascript based on user app histories.</p>
+                <h3>Software Engineering Intern @ Papertrail Inc.</h3>
+                <button command="show-modal" commandfor="intern-exp-dialog">See More</button>
             </div>
         </div>
     </section>
+    <dialog id="full-stack-exp-dialog">
+        <h3>Full Stack Engineer</h3>
+        <i>Jun 2026 - Aug 2026</i>
+        <p>Built a user generated content pipeline using Python and Amazon for a edtech startup.</p>
+        <button id="close-full-stack-dialog">Close</button>
+    </dialog>
+    <dialog id="swe-exp-dialog">
+        <h3>Software Engineer</h3>
+        <i>May 2025 - Aug 2026</i>
+        <p>Developed a patient facing medical app to measure motor skill abilities using Android.</p>
+        <button id="close-swe-dialog">Close</button>
+    </dialog>
+    <dialog id="intern-exp-dialog">
+        <h3>Software Engineering Intern</h3>
+        <i>June 2024 - Aug 2024</i>
+        <p>Built a push notification system with AWS Lambda and Javascript based on user app histories.</p>
+        <button id="close-intern-dialog">Close</button>
+    </dialog>
     <section id="video">
         <h2>Video</h2>
         <video controls>

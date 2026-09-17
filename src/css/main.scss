@@ -171,13 +171,45 @@ a{
 .multi-column-box {
     padding-top: 20px;
     padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
 }
+
+.multi-column-box > button {
+    margin-top: 10px;
+    cursor: pointer;
+}
+
 .multi-column-box:first-of-type, .multi-column-box:last-of-type {
     animation: gridPulseSides 2s ease-in-out infinite;
 }
 
 .multi-column-box:nth-of-type(2) {
-    animation: gridPulseCenter 2s ease-in-out 4infinite;
+    animation: gridPulseCenter 2s ease-in-out infinite;
+}
+
+/*
+dialog citation styling and usage 
+https://css-tricks.com/using-and-styling-the-dialog-element/
+*/
+
+dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    &[open] {
+        border: 2px solid $primary-color;
+        padding: 20px;
+    }
+}
+
+dialog > button {
+    margin-top: 10px;
+    background-color: red;
+    color: white;
+    cursor: pointer;
 }
 
 @keyframes gridPulseCenter {

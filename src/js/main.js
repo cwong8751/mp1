@@ -113,3 +113,20 @@ window.addEventListener('scroll', () => {
         });
     }
 });
+
+// close dialog button handlers
+const close_fs = document.getElementById('close-full-stack-dialog');
+const close_swe = document.getElementById('close-swe-dialog');
+const close_intern = document.getElementById('close-intern-dialog');
+
+close_swe.addEventListener('click', () => {
+    document.getElementById('swe-exp-dialog').close();
+});
+
+close_intern.addEventListener('click', () => {
+    document.getElementById('intern-exp-dialog').close();
+});
+
+close_fs.addEventListener('click', () => {
+    document.getElementById('full-stack-exp-dialog').close();
+});
